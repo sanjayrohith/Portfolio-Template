@@ -1,94 +1,181 @@
 <div align="center">
 
-# Sanjay Rohith — Portfolio
+# ⚡ Sanjay Rohith — Terminal Portfolio
 
-Elegant, fast personal site built with Next.js 15, TypeScript, Tailwind, and shadcn/ui — featuring a local terminal simulation and a tasteful Three.js particle background.
+A **Linux-inspired developer portfolio** built with **Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui**, featuring a **local terminal simulator** and a **high-performance Three.js particle background**.
+
+> Minimal. Fast. Terminal-native.
+
+<br/>
+
+### ⭐ If this project helped you, consider giving it a star — it truly supports my work!
+
+<br/>
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Components-000000)](https://ui.shadcn.com/)
 [![three.js](https://img.shields.io/badge/three.js-3D-000000?logo=three.js&logoColor=white)](https://threejs.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+<br/>
+
+🚀 **Live Site:** Set `NEXT_PUBLIC_SITE_URL` in `.env.local` and deploy (Vercel recommended)
 
 </div>
 
-> Live site URL: set `NEXT_PUBLIC_SITE_URL` in `.env.local` and deploy (Vercel recommended).
+---
 
-## ✨ Features
-- Local terminal simulation with typewriter effect — no external APIs required
-- Glassmorphic, accessible mobile navigation with smooth transitions
-- Three.js particle background tuned for performance on mobile
-- Polished dark theme with high contrast and focus-visible styles
-- SEO defaults: metadata, robots.txt, sitemap.xml, and JSON-LD Person schema
-- Contact form with server route and honeypot spam protection
-- Strict type and lint gates for safer changes
+## ✨ Why This Portfolio?
+
+This is **not another boring portfolio template**. It is designed for:
+- Linux users
+- Terminal lovers
+- Developers who care about performance and aesthetics
+
+You get a **realistic terminal simulation**, **smooth glass UI**, and **SEO-ready production setup** out of the box.
+
+---
+
+## 🔥 Features
+
+- Local **terminal simulation with typewriter effect** (no APIs needed)
+- **Glassmorphic, accessible mobile navigation**
+- **High-performance Three.js particle background**
+- **True dark theme** with high contrast
+- **SEO-first setup** (metadata, sitemap, robots.txt, JSON-LD)
+- **Contact form with honeypot spam protection**
+- **Strict type safety & lint checks**
+- Fully mobile responsive
+
+---
 
 ## 🧰 Tech Stack
-- Framework: Next.js 15 (App Router)
-- Language: TypeScript, React 18
-- UI: Tailwind CSS, shadcn/ui, lucide-react icons
-- 3D: three.js
 
-## 🚀 Quick start
-Prerequisites: Node.js 18+
+| Layer | Technology |
+|------|------------|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript, React 18 |
+| Styling | Tailwind CSS, shadcn/ui |
+| Icons | lucide-react |
+| 3D Effects | three.js |
 
-```sh
-cp .env.example .env.local  # fill values
+---
+
+## 🚀 Quick Start
+
+### ✅ Prerequisites
+- Node.js **18+**
+
+### ✅ Setup
+
+```bash
+cp .env.example .env.local
 npm install
 npm run dev
-```
+App runs at:
+👉 http://localhost:9002
+⚙️ Environment Variables
 
-App runs at http://localhost:9002 by default.
+Create .env.local from .env.example:
 
-## ⚙️ Environment variables
-Create `.env.local` from `.env.example`:
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 
-- NEXT_PUBLIC_SITE_URL: Public site URL for metadata/sitemap (e.g., https://yourdomain.com)
-- Optional email integration (if you wire it in `src/app/api/contact/route.ts`):
-	- RESEND_API_KEY, or SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS
 
-## 📁 Project structure
-```
+Optional email support:
+
+RESEND_API_KEY=
+# OR
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+
+📁 Project Structure
 src/
-	app/               # App Router pages, SEO routes, API endpoints
-	components/        # UI, layout, terminal, 3D background
-	hooks/             # Custom hooks
-	lib/               # Utilities and data
+ ├── app/               # App Router, SEO, API routes
+ ├── components/        # UI, terminal, 3D background
+ ├── hooks/             # Custom hooks
+ └── lib/               # Utilities and data
+
+🔑 Key Files
+
+terminal.tsx → Terminal output engine
+
+header.tsx → Glassmorphic navbar
+
+3d-background.tsx → Particle system
+
+api/contact/route.ts → Secure contact handler
+
+sitemap.ts & robots.ts → SEO
+
+📦 Scripts
+npm run dev        # Dev server (9002)
+npm run build      # Production build
+npm run start      # Start production
+npm run lint       # ESLint
+npm run typecheck  # TypeScript safety
+
+🧪 Quality Rules
+
+Always run:
+
+npm run lint
+npm run typecheck
+
+
+before pushing code.
+
+CI-ready by design.
+
+☁️ Deployment
+
+Deploy easily on:
+
+Vercel
+
+Netlify
+
+Render
+
+Any Next.js supported host
+
+✅ Just don’t forget to set:
+
+NEXT_PUBLIC_SITE_URL
 ```
+🧩 Roadmap
 
-Key files:
-- `src/components/terminal.tsx` – local terminal output generator
-- `src/components/layout/header.tsx` – header with glassmorphic mobile menu
-- `src/components/3d-background.tsx` – optimized particle background
-- `src/app/api/contact/route.ts` – contact form handler with honeypot
-- `src/app/sitemap.ts` and `src/app/robots.ts` – SEO
+Email delivery with Resend / SMTP
 
-## 📦 Scripts
-- `dev` – Next dev server with Turbopack on port 9002
-- `build` – Production build
-- `start` – Start production server
-- `lint` – ESLint
-- `typecheck` – TypeScript checks
+GitHub Actions CI pipeline
 
-## 🧪 Quality gates
-- Run `npm run typecheck` and `npm run lint` before pushing
-- CI-ready — add your preferred GitHub Action to call the scripts above
+Open Graph social preview image
 
-## ☁️ Deployment
-- Vercel, Netlify, Render, or any Next.js-compatible host
-- Ensure `NEXT_PUBLIC_SITE_URL` is set in your host’s environment
+🙌 Credits
 
-## 🧩 Roadmap
-- [ ] Optional: email delivery with Resend or SMTP
-- [ ] Optional: add GitHub Actions for CI (typecheck + lint + build)
-- [ ] Optional: add Open Graph preview image in `public/` and reference in metadata
+shadcn/ui → UI primitives
 
-## 🙌 Acknowledgements
-- shadcn/ui for unstyled primitives
-- three.js for the background
+three.js → 3D background
 
-## 📝 License
-This project is open-sourced under the MIT License. See [LICENSE](./LICENSE).
- 
+📝 License
 
+MIT Licensed.
+You are free to:
+
+Use it
+
+Modify it
+
+Deploy it
+
+Monetize it
+
+<div align="center">
+⭐ If you found this useful, please STAR this repo —
+
+it helps more than you think.
+
+</div>
